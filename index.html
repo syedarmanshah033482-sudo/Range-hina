@@ -5,112 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Range Hina Herbal Hair Oil</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fffdf8; }
-    header { background: #1e5631; color: white; text-align: center; padding: 25px; }
-    nav { background: #145214; text-align: center; padding: 12px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .hero { background: url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0642') no-repeat center/cover; 
-            color: white; text-align: center; padding: 100px 20px; }
-    .hero h1 { font-size: 50px; margin: 0; }
-    .hero p { font-size: 20px; margin: 15px 0; }
-    .hero button { padding: 14px 28px; font-size: 18px; background: gold; border: none; border-radius: 5px; cursor: pointer; }
-    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #145214; margin-bottom: 15px; }
-    .product-card { border: 1px solid #ddd; border-radius: 10px; padding: 25px; text-align: center; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.1);}
-    .product-card img { width: 220px; border-radius: 10px; }
-    form input, form textarea, form select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    form button { background: #228b22; color: white; padding: 14px; border: none; cursor: pointer; font-size: 18px; }
-    form button:hover { background: #145214; }
-    footer { background: #145214; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    .info-box { background: #fef4e8; padding: 25px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-    .info-box h3 { margin-top: 20px; color: #1e5631; }
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    .product-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      display: inline-block;
+      max-width: 350px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    .product-card h3 {
+      margin: 15px 0 10px;
+    }
+    .features {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .features p {
+      margin: 8px 0;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .buttons button:hover {
+      background: #444;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>🌿 Range Hina Herbal Hair Oil 🌿</h1>
-    <p>Natural Care for Healthy, Strong & Shiny Hair</p>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#shop">Shop</a>
-    <a href="#ingredients">Ingredients</a>
-    <a href="#order">Order</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Hero -->
-  <div class="hero" id="home">
-    <h1>Pure Herbal Hair Oil</h1>
-    <p>Say goodbye to dandruff & hair fall</p>
-    <button onclick="document.getElementById('order').scrollIntoView()">Buy Now</button>
-  </div>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Range Hina</h2>
-    <p>Range Hina Herbal Hair Oil is made with 100% natural ingredients that nourish your scalp and promote healthy hair growth. 
-       Our unique formula reduces hair fall, controls dandruff and provides long-lasting shine.</p>
-  </section>
-
-  <!-- Shop -->
-  <section id="shop">
-    <h2>Our Product</h2>
+  <section class="product-section">
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c" alt="Hair Oil">
+      <!-- Bottle Image -->
+      <img src="images/herbal-oil.png" alt="Herbal Hair Oil">
+
       <h3>Range Hina Herbal Hair Oil</h3>
-      <p><strong>Price:</strong> Rs. 1400 (100ml Bottle)</p>
-      <button onclick="document.getElementById('order').scrollIntoView()">Order Now</button>
+      <p><strong>Price:</strong> Rs. 1600 (500ml Bottle)</p>
+
+      <!-- Features -->
+      <div class="features">
+        <p>🎁 Free Home Delivery</p>
+        <p>✅ 100% Halal Ingredients</p>
+        <p>✅ 100% Satisfaction Guaranteed</p>
+        <p>✅ 10,000+ Happy Customer Trusted</p>
+        <p>✅ 100% Natural</p>
+        <p>✅ No Artificial Colors or Flavors</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button>Add to Cart</button>
+        <button>Buy Now</button>
+      </div>
     </div>
   </section>
-
-  <!-- Ingredients -->
-  <section id="ingredients">
-    <h2>Ingredients, How to Use & Benefits</h2>
-    <div class="info-box">
-      <h3>🌿 Ingredients</h3>
-      <p>Lavender, Onion, Almond, Clove, Peppermint, Tulsi leaves, Indian gooseberry, Rosemary, Curry leaves, Mustard oil, Castor oil, Hibiscus, Amla powder, Fenugreek seeds, Retha.</p>
-      <h3>🧴 How to Use</h3>
-      <p>Apply oil to scalp and massage gently. Leave for 1-2 hours or overnight, then wash with mild shampoo.</p>
-      <h3>💚 Benefits</h3>
-      <p>✔ Stimulates hair growth <br> ✔ Controls dandruff <br> ✔ Adds shine & smoothness <br> ✔ Nourishes scalp naturally</p>
-    </div>
-  </section>
-
-  <!-- Order -->
-  <section id="order">
-    <h2>Order Now</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="email" placeholder="Email (optional)">
-      <select>
-        <option value="1">1 Bottle - Rs. 1400</option>
-        <option value="2">2 Bottles - Rs. 2800</option>
-        <option value="3">3 Bottles - Rs. 4200</option>
-      </select>
-      <textarea placeholder="Additional Notes"></textarea>
-      <button type="submit">Place Order</button>
-    </form>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: <strong>03255927580</strong></p>
-    <p>💬 WhatsApp: <a href="https://wa.me/923255927580" target="_blank">Chat on WhatsApp</a></p>
-    <p>📧 Email: <a href="mailto:syedarmanshah033482@gmail.com">syedarmanshah033482@gmail.com</a></p>
-    <p>📍 Location: Pakistan</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Range Hina. All Rights Reserved.</p>
-  </footer>
 
 </body>
 </html>
