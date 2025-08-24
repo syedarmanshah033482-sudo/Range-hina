@@ -9,94 +9,104 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: white;
-      color: black;
       text-align: center;
+      background-color: #ffffff;
+      color: #000000;
     }
-    header {
-      padding: 20px;
-      background: #f4f4f4;
+
+    /* Green Welcome Section */
+    .welcome-section {
+      background-color: #1b5e20; /* Dark Green */
+      color: white;
+      padding: 40px 20px;
     }
+
+    .welcome-section h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    /* Navigation Menu */
     nav {
-      margin: 20px 0;
+      background-color: #145214;
+      padding: 10px;
     }
+
     nav a {
+      color: white;
       margin: 0 15px;
       text-decoration: none;
-      color: black;
       font-weight: bold;
     }
-    section {
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content Section */
+    .content {
       padding: 20px;
     }
-    img {
+
+    .content img {
       margin-top: 20px;
-      max-width: 300px;
-      border-radius: 10px;
+      width: 220px;
     }
-    footer {
-      background: #f4f4f4;
-      padding: 10px;
-      margin-top: 20px;
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #1b5e20;
+    }
+
+    /* Buy Button */
+    .buy-btn {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #e6b800;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Range Hina Herbal Hair Oil</h1>
-    <p>Pure & Natural Care for Your Hair</p>
-  </header>
 
-  <!-- Navigation Menu -->
+  <!-- Green Welcome Section -->
+  <div class="welcome-section">
+    <h2>
+      Welcome to Range Hina Herbal Hair Oil <br>
+      Herbal solution for strong, shiny and healthy hair. <br>
+      Pure and natural care for your hair
+    </h2>
+  </div>
+
+  <!-- Navigation -->
   <nav>
-    <a href="#home">1. Home</a>
-    <a href="#how">2. How to Use</a>
-    <a href="#ingredients">3. Ingredients</a>
-    <a href="#shop">4. Shop</a>
-    <a href="#contact">5. Contact Us</a>
+    <a href="#">Home</a>
+    <a href="#">Ingredients</a>
+    <a href="#">About</a>
+    <a href="#">Shop</a>
+    <a href="#">Order</a>
+    <a href="#">Contact</a>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Welcome to Range Hina Herbal Hair Oil</h2>
-    <p>Herbal solution for strong, shiny, and healthy hair.</p>
-    
-    <!-- Image (GitHub link) -->
-    <img src="https://raw.githubusercontent.com/syedarmanshah033482-sudo/Range-hina/main/Herbal-HAir-Oil-900-1.webp" alt="Herbal Hair Oil">
-    
-    <h3>Price: 1600 PKR</h3>
-  </section>
+  <!-- Product Section -->
+  <div class="content">
+    <img src="herbal-oil.jpg" alt="Range Hina Herbal Hair Oil">
+    <p class="price">Price: Rs. 1600</p>
+    <a href="#" class="buy-btn">Buy Now</a>
+  </div>
 
-  <!-- How to Use Section -->
-  <section id="how">
-    <h2>How to Use</h2>
-    <p>Massage gently into scalp, leave for 30 minutes, and wash with mild shampoo.</p>
-  </section>
-
-  <!-- Ingredients Section -->
-  <section id="ingredients">
-    <h2>Ingredients</h2>
-    <p>Made with natural herbs and essential oils for complete nourishment.</p>
-  </section>
-
-  <!-- Shop Section -->
-  <section id="shop">
-    <h2>Shop Now</h2>
-    <p>Order your bottle of Range Hina Herbal Hair Oil today!</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: 03255927580</p>
-    <p>💬 WhatsApp: 03255927580</p>
-    <p>📧 Email: syedarmanshah033482@gmail.com</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Range Hina Herbal Hair Oil. All rights reserved.</p>
-  </footer>
 </body>
 </html>
