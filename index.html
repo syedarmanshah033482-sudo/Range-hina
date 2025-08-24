@@ -1,116 +1,705 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Range Hina Herbal Hair Oil</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fffdf8; }
-    header { background: #1e5631; color: white; text-align: center; padding: 25px; }
-    nav { background: #145214; text-align: center; padding: 12px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .hero { background: url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0642') no-repeat center/cover; 
-            color: white; text-align: center; padding: 100px 20px; }
-    .hero h1 { font-size: 50px; margin: 0; }
-    .hero p { font-size: 20px; margin: 15px 0; }
-    .hero button { padding: 14px 28px; font-size: 18px; background: gold; border: none; border-radius: 5px; cursor: pointer; }
-    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #145214; margin-bottom: 15px; }
-    .product-card { border: 1px solid #ddd; border-radius: 10px; padding: 25px; text-align: center; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.1);}
-    .product-card img { width: 220px; border-radius: 10px; }
-    form input, form textarea, form select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    form button { background: #228b22; color: white; padding: 14px; border: none; cursor: pointer; font-size: 18px; }
-    form button:hover { background: #145214; }
-    footer { background: #145214; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    .info-box { background: #fef4e8; padding: 25px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-    .info-box h3 { margin-top: 20px; color: #1e5631; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyGames - Premium Casino Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #0dcaf0;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: var(--gradient);
+            color: var(--light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--warning), var(--danger));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            color: var(--warning);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--warning);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--warning);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .user-panel {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .balance {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .balance-amount {
+            color: var(--warning);
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #157347;
+            transform: translateY(-2px);
+        }
+        
+        /* Banner Styles */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1513384566735-84047869d65c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .banner h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--warning), var(--danger));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--light);
+        }
+        
+        .banner-cta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Promo Banners */
+        .promo-banners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .promo-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .promo-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .promo-icon {
+            font-size: 40px;
+            color: var(--warning);
+            margin-bottom: 15px;
+        }
+        
+        .promo-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--warning);
+        }
+        
+        /* Game Banners */
+        .game-banners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .game-banner {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .game-banner:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-banner-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .game-banner-content {
+            padding: 20px;
+        }
+        
+        .game-banner h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--warning);
+        }
+        
+        .game-banner p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .game-banner .btn {
+            width: 100%;
+        }
+        
+        /* Games Section */
+        .games-section {
+            margin: 50px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--warning);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--warning);
+        }
+        
+        .games-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .game-tab {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .game-tab.active {
+            background: var(--primary);
+        }
+        
+        .game-tab:hover {
+            background: rgba(13, 110, 253, 0.5);
+        }
+        
+        .game-container {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .game-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--warning);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px 0 20px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--warning);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--warning);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .banner-cta {
+                flex-direction: column;
+            }
+            
+            .user-panel {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-dice-d20 logo-icon"></i>
+                    <div class="logo-text">Lucky<span>Games</span></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-panel">
+                    <div class="balance">
+                        <i class="fas fa-coins"></i>
+                        Balance: <span class="balance-amount">$1,000.00</span>
+                    </div>
+                    <button class="btn btn-primary"><i class="fas fa-wallet"></i> Deposit</button>
+                    <button class="btn btn-success"><i class="fas fa-user"></i> Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <header>
-    <h1>🌿 Range Hina Herbal Hair Oil 🌿</h1>
-    <p>Natural Care for Healthy, Strong & Shiny Hair</p>
-  </header>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Main Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>Welcome to LuckyGames Casino</h1>
+                <p>Experience the thrill of premium casino games with exclusive bonuses and huge winning opportunities!</p>
+                <div class="banner-cta">
+                    <button class="btn btn-primary"><i class="fas fa-play-circle"></i> Play Now</button>
+                    <button class="btn btn-success"><i class="fas fa-gift"></i> Claim Bonus</button>
+                </div>
+            </div>
+        </div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#shop">Shop</a>
-    <a href="#ingredients">Ingredients</a>
-    <a href="#order">Order</a>
-    <a href="#contact">Contact</a>
-  </nav>
+        <!-- Promo Banners -->
+        <div class="promo-banners">
+            <div class="promo-card">
+                <div class="promo-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Welcome Bonus</h3>
+                <p>Get 100% bonus up to $500 on your first deposit</p>
+                <button class="btn btn-primary">Claim Now</button>
+            </div>
+            
+            <div class="promo-card">
+                <div class="promo-icon">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <h3>Weekly Cashback</h3>
+                <p>Get 10% cashback on all your losses every week</p>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+            
+            <div class="promo-card">
+                <div class="promo-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>VIP Program</h3>
+                <p>Exclusive rewards and personal account manager</p>
+                <button class="btn btn-primary">Join VIP</button>
+            </div>
+        </div>
 
-  <!-- Hero -->
-  <div class="hero" id="home">
-    <h1>Pure Herbal Hair Oil</h1>
-    <p>Say goodbye to dandruff & hair fall</p>
-    <button onclick="document.getElementById('order').scrollIntoView()">Buy Now</button>
-  </div>
+        <!-- Game Banners -->
+        <h2 class="section-title">Featured Games</h2>
+        <div class="game-banners">
+            <div class="game-banner">
+                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1643330683233-ff2ac89b002c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="game-banner-content">
+                    <h3>Aviator</h3>
+                    <p>Watch the plane fly and cash out before it crashes!</p>
+                    <button class="btn btn-primary">Play Now</button>
+                </div>
+            </div>
+            
+            <div class="game-banner">
+                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1510993511679-8d87b9985090?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="game-banner-content">
+                    <h3>Chicken Road</h3>
+                    <p>Help the chicken cross the road for big multipliers!</p>
+                    <button class="btn btn-primary">Play Now</button>
+                </div>
+            </div>
+            
+            <div class="game-banner">
+                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1634993201688-2191934fcf6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="game-banner-content">
+                    <h3>Mines</h3>
+                    <p>Find gems and avoid mines to multiply your winnings!</p>
+                    <button class="btn btn-primary">Play Now</button>
+                </div>
+            </div>
+            
+            <div class="game-banner">
+                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="game-banner-content">
+                    <h3>Dice</h3>
+                    <p>Predict the dice outcome for instant wins!</p>
+                    <button class="btn btn-primary">Play Now</button>
+                </div>
+            </div>
+        </div>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Range Hina</h2>
-    <p>Range Hina Herbal Hair Oil is made with 100% natural ingredients that nourish your scalp and promote healthy hair growth. 
-       Our unique formula reduces hair fall, controls dandruff and provides long-lasting shine.</p>
-  </section>
-
-  <!-- Shop -->
-  <section id="shop">
-    <h2>Our Product</h2>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c" alt="Hair Oil">
-      <h3>Range Hina Herbal Hair Oil</h3>
-      <p><strong>Price:</strong> Rs. 1400 (100ml Bottle)</p>
-      <button onclick="document.getElementById('order').scrollIntoView()">Order Now</button>
+        <!-- Games Section -->
+        <div class="games-section">
+            <h2 class="section-title">Play Now</h2>
+            
+            <div class="games-tabs">
+                <div class="game-tab active">Aviator</div>
+                <div class="game-tab">Chicken Road</div>
+                <div class="game-tab">Mines</div>
+                <div class="game-tab">Dice</div>
+                <div class="game-tab">Coin Flip</div>
+            </div>
+            
+            <div class="game-container">
+                <div class="game-header">
+                    <h3 class="game-title">Aviator</h3>
+                    <div class="game-stats">
+                        <span>Multiplier: <strong>3.56x</strong></span>
+                    </div>
+                </div>
+                
+                <div class="bet-panel">
+                    <div class="bet-input">
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type="number" value="10.00" min="1" step="0.5">
+                    </div>
+                    
+                    <div class="bet-actions">
+                        <button class="btn btn-primary">Place Bet</button>
+                        <button class="btn btn-success">Cash Out</button>
+                        <button class="btn btn-danger">Auto Cashout</button>
+                    </div>
+                </div>
+                
+                <div class="game-area">
+                    <div style="text-align: center; padding: 50px; color: #ccc;">
+                        <i class="fas fa-plane" style="font-size: 48px; margin-bottom: 20px;"></i>
+                        <p>Game visualization will appear here</p>
+                    </div>
+                </div>
+                
+                <div class="game-ui">
+                    <div class="stats-panel">
+                        <h4>Last Results</h4>
+                        <div class="results">
+                            <span class="result-chip">1.24x</span>
+                            <span class="result-chip">3.56x</span>
+                            <span class="result-chip">0.98x</span>
+                            <span class="result-chip">5.21x</span>
+                            <span class="result-chip">2.15x</span>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn btn-primary"><i class="fas fa-history"></i> History</button>
+                        <button class="btn btn-primary"><i class="fas fa-cog"></i> Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- Ingredients -->
-  <section id="ingredients">
-    <h2>Ingredients, How to Use & Benefits</h2>
-    <div class="info-box">
-      <h3>🌿 Ingredients</h3>
-      <p>Lavender, Onion, Almond, Clove, Peppermint, Tulsi leaves, Indian gooseberry, Rosemary, Curry leaves, Mustard oil, Castor oil, Hibiscus, Amla powder, Fenugreek seeds, Retha.</p>
-      <h3>🧴 How to Use</h3>
-      <p>Apply oil to scalp and massage gently. Leave for 1-2 hours or overnight, then wash with mild shampoo.</p>
-      <h3>💚 Benefits</h3>
-      <p>✔ Stimulates hair growth <br> ✔ Controls dandruff <br> ✔ Adds shine & smoothness <br> ✔ Nourishes scalp naturally</p>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LuckyGames</h3>
+                    <p>Experience the thrill of premium casino games with exclusive bonuses and huge winning opportunities!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Games</h3>
+                    <ul>
+                        <li><a href="#">Aviator</a></li>
+                        <li><a href="#">Chicken Road</a></li>
+                        <li><a href="#">Mines</a></li>
+                        <li><a href="#">Dice</a></li>
+                        <li><a href="#">Coin Flip</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Responsible Gaming</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 LuckyGames. All rights reserved. | 18+ Please play responsibly.</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Order -->
-  <section id="order">
-    <h2>Order Now</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="email" placeholder="Email (optional)">
-      <select>
-        <option value="1">1 Bottle - Rs. 1400</option>
-        <option value="2">2 Bottles - Rs. 2800</option>
-        <option value="3">3 Bottles - Rs. 4200</option>
-      </select>
-      <textarea placeholder="Additional Notes"></textarea>
-      <button type="submit">Place Order</button>
-    </form>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: <strong>03255927580</strong></p>
-    <p>💬 WhatsApp: <a href="https://wa.me/923255927580" target="_blank">Chat on WhatsApp</a></p>
-    <p>📧 Email: <a href="mailto:syedarmanshah033482@gmail.com">syedarmanshah033482@gmail.com</a></p>
-    <p>📍 Location: Pakistan</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Range Hina. All Rights Reserved.</p>
-  </footer>
-
+    <script>
+        // Simple interactivity for game tabs
+        document.querySelectorAll('.game-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.game-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update game title based on selection
+                const gameTitle = document.querySelector('.game-title');
+                gameTitle.textContent = tab.textContent;
+            });
+        });
+        
+        // Balance animation
+        const balanceElement = document.querySelector('.balance-amount');
+        let balance = 1000.00;
+        
+        setInterval(() => {
+            // Simulate small balance changes
+            const change = (Math.random() - 0.5) * 10;
+            balance = Math.max(0, balance + change);
+            balanceElement.textContent = `$${balance.toFixed(2)}`;
+        }, 5000);
+    </script>
 </body>
 </html>
