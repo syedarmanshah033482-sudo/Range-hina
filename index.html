@@ -1,23 +1,23 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuckyGames - Premium Casino Experience</title>
+    <title>StyleMart - Online Shopping Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #0d6efd;
-            --secondary: #6c757d;
-            --success: #198754;
-            --danger: #dc3545;
+            --primary: #4a6de5;
+            --secondary: #7e8c9a;
+            --success: #28a745;
             --warning: #ffc107;
-            --info: #0dcaf0;
-            --dark: #212529;
+            --danger: #dc3545;
+            --dark: #343a40;
             --light: #f8f9fa;
-            --gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --gray: #6c757d;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+            --border: #dee2e6;
         }
         
         * {
@@ -28,9 +28,8 @@ html
         }
         
         body {
-            background: var(--gradient);
-            color: var(--light);
-            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #333;
             line-height: 1.6;
         }
         
@@ -42,13 +41,34 @@ html
         
         /* Header Styles */
         header {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-top {
+            background-color: var(--dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-top-content a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        
+        .header-main {
+            padding: 15px 0;
         }
         
         .header-content {
@@ -58,314 +78,393 @@ html
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-text {
             font-size: 28px;
             font-weight: 700;
-            background: linear-gradient(to right, var(--warning), var(--danger));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .logo-icon {
-            font-size: 32px;
-            color: var(--warning);
-        }
-        
-        nav ul {
+            color: var(--primary);
             display: flex;
-            list-style: none;
-            gap: 25px;
+            align-items: center;
         }
         
-        nav a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 30px;
             position: relative;
         }
         
-        nav a:hover {
-            color: var(--warning);
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--warning);
-            transition: width 0.3s;
-        }
-        
-        nav a:hover::after {
+        .search-bar input {
             width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            font-size: 1rem;
         }
         
-        .user-panel {
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: 7px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        
+        .header-icons {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
         
-        .balance {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 600;
+        .header-icons a {
+            color: var(--dark);
+            font-size: 1.2rem;
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--danger);
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
         }
         
-        .balance-amount {
-            color: var(--warning);
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown {
+            position: absolute;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            display: none;
+            z-index: 10;
+        }
+        
+        .dropdown a {
+            color: var(--dark);
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .nav-links li:hover .dropdown {
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
         
         .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
             background: var(--primary);
             color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
-        .btn-primary:hover {
-            background: #0b5ed7;
-            transform: translateY(-2px);
+        .btn:hover {
+            background: #3a5bd0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-        
-        .btn-success:hover {
-            background: #157347;
-            transform: translateY(-2px);
-        }
-        
-        /* Banner Styles */
-        .banner {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1513384566735-84047869d65c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 0;
+        /* Categories Section */
+        .section-title {
             text-align: center;
-            margin: 30px 0;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
+            margin: 40px 0 30px;
+            font-size: 2rem;
+            color: var(--dark);
         }
         
-        .banner-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .banner h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, var(--warning), var(--danger));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .banner p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: var(--light);
-        }
-        
-        .banner-cta {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        /* Promo Banners */
-        .promo-banners {
+        .categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin: 40px 0;
+            margin-bottom: 40px;
         }
         
-        .promo-card {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .promo-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .promo-icon {
-            font-size: 40px;
-            color: var(--warning);
-            margin-bottom: 15px;
-        }
-        
-        .promo-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--warning);
-        }
-        
-        /* Game Banners */
-        .game-banners {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        
-        .game-banner {
-            background: var(--card-bg);
+        .category-card {
+            background: white;
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
         }
         
-        .game-banner:hover {
+        .category-card:hover {
             transform: translateY(-5px);
         }
         
-        .game-banner-img {
-            height: 180px;
+        .category-img {
+            height: 200px;
             background-size: cover;
             background-position: center;
         }
         
-        .game-banner-content {
+        .category-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .category-content h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Products Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--danger);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        
+        .product-content {
             padding: 20px;
         }
         
-        .game-banner h3 {
-            font-size: 1.4rem;
+        .product-title {
+            font-size: 1.1rem;
             margin-bottom: 10px;
-            color: var(--warning);
         }
         
-        .game-banner p {
-            color: #ccc;
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             margin-bottom: 15px;
-            font-size: 0.9rem;
         }
         
-        .game-banner .btn {
-            width: 100%;
+        .current-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
         }
         
-        /* Games Section */
-        .games-section {
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+        }
+        
+        .discount {
+            color: var(--danger);
+            font-weight: 600;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .add-to-cart {
+            flex-grow: 1;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background: #3a5bd0;
+        }
+        
+        .wishlist {
+            width: 40px;
+            margin-left: 10px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .wishlist:hover {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin: 50px 0;
         }
         
-        .section-title {
-            font-size: 2.2rem;
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
             text-align: center;
-            margin-bottom: 40px;
-            color: var(--warning);
-            position: relative;
-            padding-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: var(--warning);
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
         }
         
-        .games-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
+        .feature h3 {
+            margin-bottom: 10px;
         }
         
-        .game-tab {
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .game-tab.active {
+        /* Newsletter Section */
+        .newsletter {
             background: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 50px 0;
         }
         
-        .game-tab:hover {
-            background: rgba(13, 110, 253, 0.5);
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
         
-        .game-container {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .game-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .newsletter h2 {
             margin-bottom: 20px;
         }
         
-        .game-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--warning);
+        .newsletter p {
+            margin-bottom: 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            background: var(--dark);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
         }
         
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 40px 0 20px;
-            margin-top: 80px;
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
         }
         
         .footer-column h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
             color: var(--warning);
         }
@@ -385,7 +484,7 @@ html
         }
         
         .footer-column a:hover {
-            color: var(--warning);
+            color: white;
         }
         
         .social-links {
@@ -425,281 +524,379 @@ html
                 gap: 15px;
             }
             
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+            .search-bar {
+                margin: 15px 0;
+                width: 100%;
             }
             
-            .banner h1 {
-                font-size: 2.5rem;
-            }
-            
-            .banner-cta {
+            .nav-links {
                 flex-direction: column;
             }
             
-            .user-panel {
+            .dropdown {
+                position: static;
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
                 flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-dice-d20 logo-icon"></i>
-                    <div class="logo-text">Lucky<span>Games</span></div>
-                </div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Promotions</a></li>
-                        <li><a href="#">Leaderboard</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="user-panel">
-                    <div class="balance">
-                        <i class="fas fa-coins"></i>
-                        Balance: <span class="balance-amount">$1,000.00</span>
-                    </div>
-                    <button class="btn btn-primary"><i class="fas fa-wallet"></i> Deposit</button>
-                    <button class="btn btn-success"><i class="fas fa-user"></i> Login</button>
-                </div>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container header-top-content">
+            <div class="contacts">
+                <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                <span><i class="fas fa-envelope"></i> support@stylemart.com</span>
             </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Main Banner -->
-        <div class="banner">
-            <div class="banner-content">
-                <h1>Welcome to LuckyGames Casino</h1>
-                <p>Experience the thrill of premium casino games with exclusive bonuses and huge winning opportunities!</p>
-                <div class="banner-cta">
-                    <button class="btn btn-primary"><i class="fas fa-play-circle"></i> Play Now</button>
-                    <button class="btn btn-success"><i class="fas fa-gift"></i> Claim Bonus</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Promo Banners -->
-        <div class="promo-banners">
-            <div class="promo-card">
-                <div class="promo-icon">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <h3>Welcome Bonus</h3>
-                <p>Get 100% bonus up to $500 on your first deposit</p>
-                <button class="btn btn-primary">Claim Now</button>
-            </div>
-            
-            <div class="promo-card">
-                <div class="promo-icon">
-                    <i class="fas fa-percentage"></i>
-                </div>
-                <h3>Weekly Cashback</h3>
-                <p>Get 10% cashback on all your losses every week</p>
-                <button class="btn btn-primary">Learn More</button>
-            </div>
-            
-            <div class="promo-card">
-                <div class="promo-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <h3>VIP Program</h3>
-                <p>Exclusive rewards and personal account manager</p>
-                <button class="btn btn-primary">Join VIP</button>
-            </div>
-        </div>
-
-        <!-- Game Banners -->
-        <h2 class="section-title">Featured Games</h2>
-        <div class="game-banners">
-            <div class="game-banner">
-                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1643330683233-ff2ac89b002c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="game-banner-content">
-                    <h3>Aviator</h3>
-                    <p>Watch the plane fly and cash out before it crashes!</p>
-                    <button class="btn btn-primary">Play Now</button>
-                </div>
-            </div>
-            
-            <div class="game-banner">
-                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1510993511679-8d87b9985090?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="game-banner-content">
-                    <h3>Chicken Road</h3>
-                    <p>Help the chicken cross the road for big multipliers!</p>
-                    <button class="btn btn-primary">Play Now</button>
-                </div>
-            </div>
-            
-            <div class="game-banner">
-                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1634993201688-2191934fcf6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="game-banner-content">
-                    <h3>Mines</h3>
-                    <p>Find gems and avoid mines to multiply your winnings!</p>
-                    <button class="btn btn-primary">Play Now</button>
-                </div>
-            </div>
-            
-            <div class="game-banner">
-                <div class="game-banner-img" style="background-image: url('https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="game-banner-content">
-                    <h3>Dice</h3>
-                    <p>Predict the dice outcome for instant wins!</p>
-                    <button class="btn btn-primary">Play Now</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Games Section -->
-        <div class="games-section">
-            <h2 class="section-title">Play Now</h2>
-            
-            <div class="games-tabs">
-                <div class="game-tab active">Aviator</div>
-                <div class="game-tab">Chicken Road</div>
-                <div class="game-tab">Mines</div>
-                <div class="game-tab">Dice</div>
-                <div class="game-tab">Coin Flip</div>
-            </div>
-            
-            <div class="game-container">
-                <div class="game-header">
-                    <h3 class="game-title">Aviator</h3>
-                    <div class="game-stats">
-                        <span>Multiplier: <strong>3.56x</strong></span>
-                    </div>
-                </div>
-                
-                <div class="bet-panel">
-                    <div class="bet-input">
-                        <i class="fas fa-dollar-sign"></i>
-                        <input type="number" value="10.00" min="1" step="0.5">
-                    </div>
-                    
-                    <div class="bet-actions">
-                        <button class="btn btn-primary">Place Bet</button>
-                        <button class="btn btn-success">Cash Out</button>
-                        <button class="btn btn-danger">Auto Cashout</button>
-                    </div>
-                </div>
-                
-                <div class="game-area">
-                    <div style="text-align: center; padding: 50px; color: #ccc;">
-                        <i class="fas fa-plane" style="font-size: 48px; margin-bottom: 20px;"></i>
-                        <p>Game visualization will appear here</p>
-                    </div>
-                </div>
-                
-                <div class="game-ui">
-                    <div class="stats-panel">
-                        <h4>Last Results</h4>
-                        <div class="results">
-                            <span class="result-chip">1.24x</span>
-                            <span class="result-chip">3.56x</span>
-                            <span class="result-chip">0.98x</span>
-                            <span class="result-chip">5.21x</span>
-                            <span class="result-chip">2.15x</span>
-                        </div>
-                    </div>
-                    
-                    <div class="actions">
-                        <button class="btn btn-primary"><i class="fas fa-history"></i> History</button>
-                        <button class="btn btn-primary"><i class="fas fa-cog"></i> Settings</button>
-                    </div>
-                </div>
+            <div class="links">
+                <a href="#"><i class="fas fa-user"></i> My Account</a>
+                <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
             </div>
         </div>
     </div>
+
+    <!-- Header Main -->
+    <header>
+        <div class="container header-main">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    StyleMart
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Men <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="#">Shirts</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Women <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="#">Dresses</a>
+                            <a href="#">Tops</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Bags</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Electronics <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="#">Phones</a>
+                            <a href="#">Laptops</a>
+                            <a href="#">Accessories</a>
+                            <a href="#">Smart Home</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Home & Kitchen</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Deals</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Summer Collection 2023</h1>
+            <p>Discover the latest trends and get up to 40% off on all summer items. Limited time offer!</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="categories">
+            <div class="category-card">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="category-content">
+                    <h3>Men's Fashion</h3>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1536678891919-e0e7d61a4b15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="category-content">
+                    <h3>Women's Fashion</h3>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="category-content">
+                    <h3>Electronics</h3>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="category-content">
+                    <h3>Home & Kitchen</h3>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                    <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Classic White T-Shirt</h3>
+                    <div class="product-price">
+                        <span class="current-price">$24.99</span>
+                        <span class="old-price">$34.99</span>
+                        <span class="discount">30% off</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Smart Watch Series 5</h3>
+                    <div class="product-price">
+                        <span class="current-price">$199.99</span>
+                        <span class="old-price">$249.99</span>
+                        <span class="discount">20% off</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                    <span class="product-badge">Popular</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Running Shoes</h3>
+                    <div class="product-price">
+                        <span class="current-price">$89.99</span>
+                        <span class="old-price">$119.99</span>
+                        <span class="discount">25% off</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                    <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Leather Handbag</h3>
+                    <div class="product-price">
+                        <span class="current-price">$59.99</span>
+                        <span class="old-price">$79.99</span>
+                        <span class="discount">25% off</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>Free Shipping</h3>
+                <p>Free shipping on orders over $50</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day money back guarantee</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payment</h3>
+                <p>All transactions are secure and encrypted</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Dedicated customer support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products, special offers, and sales.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>LuckyGames</h3>
-                    <p>Experience the thrill of premium casino games with exclusive bonuses and huge winning opportunities!</p>
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Men's Fashion</a></li>
+                        <li><a href="#">Women's Fashion</a></li>
+                        <li><a href="#">Kids' Fashion</a></li>
+                        <li><a href="#">Home & Kitchen</a></li>
+                        <li><a href="#">Electronics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p>1234 Commerce St, Suite 567<br>New York, NY 10001</p>
+                    <p>Email: support@stylemart.com<br>Phone: +1 (555) 123-4567</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
                     </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Promotions</a></li>
-                        <li><a href="#">Leaderboard</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Games</h3>
-                    <ul>
-                        <li><a href="#">Aviator</a></li>
-                        <li><a href="#">Chicken Road</a></li>
-                        <li><a href="#">Mines</a></li>
-                        <li><a href="#">Dice</a></li>
-                        <li><a href="#">Coin Flip</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Responsible Gaming</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 LuckyGames. All rights reserved. | 18+ Please play responsibly.</p>
+                <p>&copy; 2023 StyleMart. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple interactivity for game tabs
-        document.querySelectorAll('.game-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.game-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
+        // Simple cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const countElement = document.querySelector('.cart-count');
+                let count = parseInt(countElement.textContent);
+                count++;
+                countElement.textContent = count;
                 
-                // Update game title based on selection
-                const gameTitle = document.querySelector('.game-title');
-                gameTitle.textContent = tab.textContent;
+                // Show added to cart feedback
+                button.textContent = 'Added!';
+                setTimeout(() => {
+                    button.textContent = 'Add to Cart';
+                }, 1500);
             });
         });
         
-        // Balance animation
-        const balanceElement = document.querySelector('.balance-amount');
-        let balance = 1000.00;
-        
-        setInterval(() => {
-            // Simulate small balance changes
-            const change = (Math.random() - 0.5) * 10;
-            balance = Math.max(0, balance + change);
-            balanceElement.textContent = `$${balance.toFixed(2)}`;
-        }, 5000);
+        // Wishlist functionality
+        document.querySelectorAll('.wishlist').forEach(button => {
+            button.addEventListener('click', () => {
+                const icon = button.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    icon.style.color = '#dc3545';
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    icon.style.color = '';
+                }
+            });
+        });
     </script>
 </body>
 </html>
